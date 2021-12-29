@@ -56,6 +56,12 @@ class GameView: UIView {
                 }
             }
         }
+        self.add(rotateButton) {
+            $0.snp.makeConstraints { make in
+                make.leading.bottom.equalToSuperview()
+                make.height.width.equalTo(80)
+            }
+        }
         
 //        self.addSubview(self.gameBoard)
 //        self.addSubview(self.gameScore)

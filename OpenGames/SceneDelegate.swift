@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -16,7 +17,23 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let scene = (scene as? UIWindowScene) else { return }
+        let tabbarVC = UITabBarController()
+        window = UIWindow(frame: scene.coordinateSpace.bounds)
+        window?.windowScene = scene
+        var gameSettings = GameSettings()
+        
+        let tetrisVC = TetrisViewController()
+        let mineVC = UIHostingController(rootView: BoardView().environmentObject(Game(from: gameSettings)))
+        mineVC.tabBarItem = UITabBarItem(title: "지뢰찾기", image: UIImage(systemName: "pencil.circle"), selectedImage: UIImage(systemName: "pencil.circle.fill"))
+        tetrisVC.tabBarItem = UITabBarItem(title: "테트리스", image: UIImage(systemName: "calendar.circle"), selectedImage: UIImage(systemName: "calendar.circle.fill"))
+        
+        window?.rootViewController = tabbarVC
+        tabbarVC.setViewControllers([
+            tetrisVC,
+            mineVC
+            
+        ], animated: true)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class ViewController: UIViewController {
+class TetrisViewController: UIViewController {
     var contentView = UIView()
     var swiftris:Swiftris!
     
