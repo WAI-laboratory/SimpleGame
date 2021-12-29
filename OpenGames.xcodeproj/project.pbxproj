@@ -13,6 +13,21 @@
 		127F331A277C144900F3B415 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 127F3318277C144900F3B415 /* Main.storyboard */; };
 		127F331C277C144A00F3B415 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 127F331B277C144A00F3B415 /* Assets.xcassets */; };
 		127F331F277C144A00F3B415 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 127F331D277C144A00F3B415 /* LaunchScreen.storyboard */; };
+		127F3327277C148700F3B415 /* Swiftris.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F3326277C148700F3B415 /* Swiftris.swift */; };
+		127F332A277C14A400F3B415 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F3329277C14A400F3B415 /* GameView.swift */; };
+		127F332C277C14B300F3B415 /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F332B277C14B300F3B415 /* GameBoard.swift */; };
+		127F332E277C14C100F3B415 /* GameScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F332D277C14C100F3B415 /* GameScore.swift */; };
+		127F3330277C14D200F3B415 /* NextBrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F332F277C14D200F3B415 /* NextBrick.swift */; };
+		127F3332277C14E800F3B415 /* GameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F3331277C14E800F3B415 /* GameButton.swift */; };
+		127F3335277C151000F3B415 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F3334277C151000F3B415 /* SoundManager.swift */; };
+		127F3338277C154A00F3B415 /* GamerTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F3337277C154900F3B415 /* GamerTimer.swift */; };
+		127F333A277C156400F3B415 /* Brick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F3339277C156400F3B415 /* Brick.swift */; };
+		127F333D277C16C500F3B415 /* fall.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 127F333C277C16C500F3B415 /* fall.mp3 */; };
+		127F333F277C16CB00F3B415 /* gameover.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 127F333E277C16CB00F3B415 /* gameover.mp3 */; };
+		127F3341277C16D000F3B415 /* harddrop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 127F3340277C16D000F3B415 /* harddrop.mp3 */; };
+		127F3343277C16D500F3B415 /* tetris_original.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 127F3342277C16D500F3B415 /* tetris_original.mp3 */; };
+		127F3346277C171500F3B415 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 127F3345277C171500F3B415 /* SnapKit */; };
+		127F3349277C18E500F3B415 /* AddThen in Frameworks */ = {isa = PBXBuildFile; productRef = 127F3348277C18E500F3B415 /* AddThen */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +39,19 @@
 		127F331B277C144A00F3B415 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		127F331E277C144A00F3B415 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		127F3320277C144A00F3B415 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		127F3326277C148700F3B415 /* Swiftris.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swiftris.swift; sourceTree = "<group>"; };
+		127F3329277C14A400F3B415 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		127F332B277C14B300F3B415 /* GameBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
+		127F332D277C14C100F3B415 /* GameScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScore.swift; sourceTree = "<group>"; };
+		127F332F277C14D200F3B415 /* NextBrick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextBrick.swift; sourceTree = "<group>"; };
+		127F3331277C14E800F3B415 /* GameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameButton.swift; sourceTree = "<group>"; };
+		127F3334277C151000F3B415 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		127F3337277C154900F3B415 /* GamerTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamerTimer.swift; sourceTree = "<group>"; };
+		127F3339277C156400F3B415 /* Brick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brick.swift; sourceTree = "<group>"; };
+		127F333C277C16C500F3B415 /* fall.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = fall.mp3; path = ../../../test/Swiftris/Swiftris/Game/Resources/fall.mp3; sourceTree = "<group>"; };
+		127F333E277C16CB00F3B415 /* gameover.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = gameover.mp3; path = ../../../test/Swiftris/Swiftris/Game/Resources/gameover.mp3; sourceTree = "<group>"; };
+		127F3340277C16D000F3B415 /* harddrop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = harddrop.mp3; path = ../../../test/Swiftris/Swiftris/Game/Resources/harddrop.mp3; sourceTree = "<group>"; };
+		127F3342277C16D500F3B415 /* tetris_original.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = tetris_original.mp3; path = ../../../test/Swiftris/Swiftris/Game/Resources/tetris_original.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				127F3346277C171500F3B415 /* SnapKit in Frameworks */,
+				127F3349277C18E500F3B415 /* AddThen in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +86,9 @@
 		127F3311277C144900F3B415 /* OpenGames */ = {
 			isa = PBXGroup;
 			children = (
+				127F333B277C169300F3B415 /* Resources */,
+				127F3336277C153500F3B415 /* Model */,
+				127F3333277C150200F3B415 /* SoundManager */,
 				127F3312277C144900F3B415 /* AppDelegate.swift */,
 				127F3314277C144900F3B415 /* SceneDelegate.swift */,
 				127F3316277C144900F3B415 /* ViewController.swift */,
@@ -63,8 +96,50 @@
 				127F331B277C144A00F3B415 /* Assets.xcassets */,
 				127F331D277C144A00F3B415 /* LaunchScreen.storyboard */,
 				127F3320277C144A00F3B415 /* Info.plist */,
+				127F3326277C148700F3B415 /* Swiftris.swift */,
+				127F3328277C149C00F3B415 /* View */,
 			);
 			path = OpenGames;
+			sourceTree = "<group>";
+		};
+		127F3328277C149C00F3B415 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				127F3329277C14A400F3B415 /* GameView.swift */,
+				127F332B277C14B300F3B415 /* GameBoard.swift */,
+				127F332D277C14C100F3B415 /* GameScore.swift */,
+				127F332F277C14D200F3B415 /* NextBrick.swift */,
+				127F3331277C14E800F3B415 /* GameButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		127F3333277C150200F3B415 /* SoundManager */ = {
+			isa = PBXGroup;
+			children = (
+				127F3334277C151000F3B415 /* SoundManager.swift */,
+			);
+			path = SoundManager;
+			sourceTree = "<group>";
+		};
+		127F3336277C153500F3B415 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				127F3337277C154900F3B415 /* GamerTimer.swift */,
+				127F3339277C156400F3B415 /* Brick.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		127F333B277C169300F3B415 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				127F3342277C16D500F3B415 /* tetris_original.mp3 */,
+				127F3340277C16D000F3B415 /* harddrop.mp3 */,
+				127F333E277C16CB00F3B415 /* gameover.mp3 */,
+				127F333C277C16C500F3B415 /* fall.mp3 */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +158,10 @@
 			dependencies = (
 			);
 			name = OpenGames;
+			packageProductDependencies = (
+				127F3345277C171500F3B415 /* SnapKit */,
+				127F3348277C18E500F3B415 /* AddThen */,
+			);
 			productName = OpenGames;
 			productReference = 127F330F277C144900F3B415 /* OpenGames.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +190,10 @@
 				Base,
 			);
 			mainGroup = 127F3306277C144900F3B415;
+			packageReferences = (
+				127F3344277C171500F3B415 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				127F3347277C18E500F3B415 /* XCRemoteSwiftPackageReference "addthen" */,
+			);
 			productRefGroup = 127F3310277C144900F3B415 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,9 +208,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				127F3341277C16D000F3B415 /* harddrop.mp3 in Resources */,
 				127F331F277C144A00F3B415 /* LaunchScreen.storyboard in Resources */,
+				127F333F277C16CB00F3B415 /* gameover.mp3 in Resources */,
+				127F333D277C16C500F3B415 /* fall.mp3 in Resources */,
 				127F331C277C144A00F3B415 /* Assets.xcassets in Resources */,
 				127F331A277C144900F3B415 /* Main.storyboard in Resources */,
+				127F3343277C16D500F3B415 /* tetris_original.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +225,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				127F3327277C148700F3B415 /* Swiftris.swift in Sources */,
 				127F3317277C144900F3B415 /* ViewController.swift in Sources */,
 				127F3313277C144900F3B415 /* AppDelegate.swift in Sources */,
+				127F3338277C154A00F3B415 /* GamerTimer.swift in Sources */,
 				127F3315277C144900F3B415 /* SceneDelegate.swift in Sources */,
+				127F333A277C156400F3B415 /* Brick.swift in Sources */,
+				127F3330277C14D200F3B415 /* NextBrick.swift in Sources */,
+				127F332C277C14B300F3B415 /* GameBoard.swift in Sources */,
+				127F332E277C14C100F3B415 /* GameScore.swift in Sources */,
+				127F3332277C14E800F3B415 /* GameButton.swift in Sources */,
+				127F332A277C14A400F3B415 /* GameView.swift in Sources */,
+				127F3335277C151000F3B415 /* SoundManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +456,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		127F3344277C171500F3B415 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		127F3347277C18E500F3B415 /* XCRemoteSwiftPackageReference "addthen" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stareta1202/addthen";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		127F3345277C171500F3B415 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 127F3344277C171500F3B415 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		127F3348277C18E500F3B415 /* AddThen */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 127F3347277C18E500F3B415 /* XCRemoteSwiftPackageReference "addthen" */;
+			productName = AddThen;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 127F3307277C144900F3B415 /* Project object */;
 }
