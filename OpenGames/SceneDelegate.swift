@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let tabbarVC = UITabBarController()
         window = UIWindow(frame: scene.coordinateSpace.bounds)
         window?.windowScene = scene
-        var gameSettings = GameSettings()
+        let gameSettings = GameSettings()
         
         let tetrisVC = TetrisViewController()
         let mineVC = UIHostingController(rootView: BoardView().environmentObject(Game(from: gameSettings)))
