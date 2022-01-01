@@ -10,6 +10,17 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var sudoku: sudokuClass = sudokuClass()
+    var load: sudokuData?
+
+    // ---------[ getPuzzles ]---------------------
+    func getPuzzles(_ name : String) -> [String] {
+        guard let url = Bundle.main.url(forResource: name, withExtension: "plist") else { return [] }
+        guard let data = try? Data(contentsOf: url) else { return [] }
+        guard let array = try? PropertyListDecoder().decode([String].self, from: data) else { return [] }
+        return array
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true

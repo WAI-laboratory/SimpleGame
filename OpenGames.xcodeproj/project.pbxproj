@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		120277DC277D873C001F03E7 /* SudokuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120277DB277D873C001F03E7 /* SudokuViewController.swift */; };
+		120277DE277D878D001F03E7 /* SudokuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120277DD277D878D001F03E7 /* SudokuView.swift */; };
+		120277E2277DAA42001F03E7 /* simple.plist in Resources */ = {isa = PBXBuildFile; fileRef = 120277E1277DAA42001F03E7 /* simple.plist */; };
+		120277E4277DAA48001F03E7 /* hard.plist in Resources */ = {isa = PBXBuildFile; fileRef = 120277E3277DAA48001F03E7 /* hard.plist */; };
+		120277E6277DAA6C001F03E7 /* SudokuClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120277E5277DAA6C001F03E7 /* SudokuClass.swift */; };
 		127F3313277C144900F3B415 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F3312277C144900F3B415 /* AppDelegate.swift */; };
 		127F3315277C144900F3B415 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F3314277C144900F3B415 /* SceneDelegate.swift */; };
 		127F3317277C144900F3B415 /* TetrisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F3316277C144900F3B415 /* TetrisViewController.swift */; };
@@ -36,6 +41,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		120277DB277D873C001F03E7 /* SudokuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuViewController.swift; sourceTree = "<group>"; };
+		120277DD277D878D001F03E7 /* SudokuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuView.swift; sourceTree = "<group>"; };
+		120277E1277DAA42001F03E7 /* simple.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = simple.plist; path = "../../test/sudoku5/Swift-Sudoku/Sudoku/simple.plist"; sourceTree = "<group>"; };
+		120277E3277DAA48001F03E7 /* hard.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = hard.plist; path = "../../test/sudoku5/Swift-Sudoku/Sudoku/hard.plist"; sourceTree = "<group>"; };
+		120277E5277DAA6C001F03E7 /* SudokuClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuClass.swift; sourceTree = "<group>"; };
 		127F330F277C144900F3B415 /* OpenGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		127F3312277C144900F3B415 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		127F3314277C144900F3B415 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +87,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		120277DA277D8728001F03E7 /* Sudoku */ = {
+			isa = PBXGroup;
+			children = (
+				120277DB277D873C001F03E7 /* SudokuViewController.swift */,
+				120277DD277D878D001F03E7 /* SudokuView.swift */,
+				120277E5277DAA6C001F03E7 /* SudokuClass.swift */,
+			);
+			path = Sudoku;
+			sourceTree = "<group>";
+		};
 		127F3306277C144900F3B415 = {
 			isa = PBXGroup;
 			children = (
@@ -96,11 +116,14 @@
 		127F3311277C144900F3B415 /* OpenGames */ = {
 			isa = PBXGroup;
 			children = (
+				120277DA277D8728001F03E7 /* Sudoku */,
 				127F334B277C260600F3B415 /* MineSweeper */,
 				127F334A277C25D100F3B415 /* Tetris */,
 				127F3312277C144900F3B415 /* AppDelegate.swift */,
 				127F3314277C144900F3B415 /* SceneDelegate.swift */,
 				127F3318277C144900F3B415 /* Main.storyboard */,
+				120277E3277DAA48001F03E7 /* hard.plist */,
+				120277E1277DAA42001F03E7 /* simple.plist */,
 				127F331B277C144A00F3B415 /* Assets.xcassets */,
 				127F331D277C144A00F3B415 /* LaunchScreen.storyboard */,
 				127F3320277C144A00F3B415 /* Info.plist */,
@@ -255,11 +278,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				120277E2277DAA42001F03E7 /* simple.plist in Resources */,
 				12901442277C589E0061AFA8 /* harddrop.mp3 in Resources */,
 				127F331F277C144A00F3B415 /* LaunchScreen.storyboard in Resources */,
 				12901440277C58990061AFA8 /* gameover.mp3 in Resources */,
 				127F331C277C144A00F3B415 /* Assets.xcassets in Resources */,
 				1290143E277C58870061AFA8 /* fall.mp3 in Resources */,
+				120277E4277DAA48001F03E7 /* hard.plist in Resources */,
 				127F331A277C144900F3B415 /* Main.storyboard in Resources */,
 				12901444277C58A30061AFA8 /* tetris_original.mp3 in Resources */,
 			);
@@ -284,7 +309,10 @@
 				127F3353277C271900F3B415 /* MineGameSettings.swift in Sources */,
 				127F3330277C14D200F3B415 /* NextBrick.swift in Sources */,
 				127F332C277C14B300F3B415 /* GameBoard.swift in Sources */,
+				120277DE277D878D001F03E7 /* SudokuView.swift in Sources */,
+				120277E6277DAA6C001F03E7 /* SudokuClass.swift in Sources */,
 				127F332E277C14C100F3B415 /* GameScore.swift in Sources */,
+				120277DC277D873C001F03E7 /* SudokuViewController.swift in Sources */,
 				127F3355277C273600F3B415 /* Minegame.swift in Sources */,
 				127F3332277C14E800F3B415 /* GameButton.swift in Sources */,
 				127F332A277C14A400F3B415 /* GameView.swift in Sources */,
@@ -446,7 +474,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -476,7 +504,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -25,14 +25,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let tetrisVC = TetrisViewController()
         let mineVC = UIHostingController(rootView: BoardView().environmentObject(Game(from: gameSettings)))
+        let sudokuVC = SudokuViewController()
         mineVC.tabBarItem = UITabBarItem(title: "지뢰찾기", image: UIImage(systemName: "pencil.circle"), selectedImage: UIImage(systemName: "pencil.circle.fill"))
         tetrisVC.tabBarItem = UITabBarItem(title: "테트리스", image: UIImage(systemName: "calendar.circle"), selectedImage: UIImage(systemName: "calendar.circle.fill"))
+        
+        sudokuVC.tabBarItem = UITabBarItem(title: "스도쿠", image: UIImage(systemName: "calendar.circle"), selectedImage: UIImage(systemName: "calendar.circle.fill"))
         
         window?.rootViewController = tabbarVC
         tabbarVC.setViewControllers([
             tetrisVC,
-            mineVC
-            
+            mineVC,
+            UINavigationController(rootViewController: sudokuVC)
         ], animated: true)
     }
 
