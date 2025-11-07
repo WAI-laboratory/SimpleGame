@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		362ABA3A55BD40A682401A0E /* DPadControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCDCE008D0A44F2846B490E /* DPadControl.swift */; };
-		DC77FB032E7D4A158221FECE /* ActionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A004C48DD145A1BD2E0C04 /* ActionButtons.swift */; };
-		C143C37F15F543069853F7F4 /* HoldPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA182A9EF9433DB8D6133A /* HoldPiece.swift */; };
 		120277DC277D873C001F03E7 /* SudokuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120277DB277D873C001F03E7 /* SudokuViewController.swift */; };
 		120277DE277D878D001F03E7 /* SudokuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120277DD277D878D001F03E7 /* SudokuView.swift */; };
+		120277E2277DAA42001F03E7 /* simple.plist in Resources */ = {isa = PBXBuildFile; fileRef = 120277E1277DAA42001F03E7 /* simple.plist */; };
+		120277E4277DAA48001F03E7 /* hard.plist in Resources */ = {isa = PBXBuildFile; fileRef = 120277E3277DAA48001F03E7 /* hard.plist */; };
 		120277E6277DAA6C001F03E7 /* SudokuClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120277E5277DAA6C001F03E7 /* SudokuClass.swift */; };
 		127F3313277C144900F3B415 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F3312277C144900F3B415 /* AppDelegate.swift */; };
 		127F3315277C144900F3B415 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F3314277C144900F3B415 /* SceneDelegate.swift */; };
@@ -35,14 +34,17 @@
 		127F3353277C271900F3B415 /* MineGameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F3352277C271900F3B415 /* MineGameSettings.swift */; };
 		127F3355277C273600F3B415 /* Minegame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F3354277C273600F3B415 /* Minegame.swift */; };
 		127F3357277C275F00F3B415 /* MineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F3356277C275F00F3B415 /* MineCell.swift */; };
+		1290143E277C58870061AFA8 /* fall.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1290143D277C58870061AFA8 /* fall.mp3 */; };
+		12901440277C58990061AFA8 /* gameover.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1290143F277C58990061AFA8 /* gameover.mp3 */; };
+		12901442277C589E0061AFA8 /* harddrop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 12901441277C589E0061AFA8 /* harddrop.mp3 */; };
+		12901444277C58A30061AFA8 /* tetris_original.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 12901443277C58A30061AFA8 /* tetris_original.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CFCDCE008D0A44F2846B490E /* DPadControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPadControl.swift; sourceTree = "<group>"; };
-		65A004C48DD145A1BD2E0C04 /* ActionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtons.swift; sourceTree = "<group>"; };
-		4ECA182A9EF9433DB8D6133A /* HoldPiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldPiece.swift; sourceTree = "<group>"; };
 		120277DB277D873C001F03E7 /* SudokuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuViewController.swift; sourceTree = "<group>"; };
 		120277DD277D878D001F03E7 /* SudokuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuView.swift; sourceTree = "<group>"; };
+		120277E1277DAA42001F03E7 /* simple.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = simple.plist; path = "../../test/sudoku5/Swift-Sudoku/Sudoku/simple.plist"; sourceTree = "<group>"; };
+		120277E3277DAA48001F03E7 /* hard.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = hard.plist; path = "../../test/sudoku5/Swift-Sudoku/Sudoku/hard.plist"; sourceTree = "<group>"; };
 		120277E5277DAA6C001F03E7 /* SudokuClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuClass.swift; sourceTree = "<group>"; };
 		127F330F277C144900F3B415 /* OpenGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		127F3312277C144900F3B415 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,10 @@
 		127F3352277C271900F3B415 /* MineGameSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineGameSettings.swift; sourceTree = "<group>"; };
 		127F3354277C273600F3B415 /* Minegame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Minegame.swift; sourceTree = "<group>"; };
 		127F3356277C275F00F3B415 /* MineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineCell.swift; sourceTree = "<group>"; };
+		1290143D277C58870061AFA8 /* fall.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = fall.mp3; path = ../../../../test/Swiftris/Swiftris/Game/Resources/fall.mp3; sourceTree = "<group>"; };
+		1290143F277C58990061AFA8 /* gameover.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = gameover.mp3; path = ../../../../test/Swiftris/Swiftris/Game/Resources/gameover.mp3; sourceTree = "<group>"; };
+		12901441277C589E0061AFA8 /* harddrop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = harddrop.mp3; path = ../../../../test/Swiftris/Swiftris/Game/Resources/harddrop.mp3; sourceTree = "<group>"; };
+		12901443277C58A30061AFA8 /* tetris_original.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = tetris_original.mp3; path = ../../../../test/Swiftris/Swiftris/Game/Resources/tetris_original.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,8 @@
 				127F3312277C144900F3B415 /* AppDelegate.swift */,
 				127F3314277C144900F3B415 /* SceneDelegate.swift */,
 				127F3318277C144900F3B415 /* Main.storyboard */,
+				120277E3277DAA48001F03E7 /* hard.plist */,
+				120277E1277DAA42001F03E7 /* simple.plist */,
 				127F331B277C144A00F3B415 /* Assets.xcassets */,
 				127F331D277C144A00F3B415 /* LaunchScreen.storyboard */,
 				127F3320277C144A00F3B415 /* Info.plist */,
@@ -131,10 +139,7 @@
 				127F332D277C14C100F3B415 /* GameScore.swift */,
 				127F332F277C14D200F3B415 /* NextBrick.swift */,
 				127F3331277C14E800F3B415 /* GameButton.swift */,
-			
-				CFCDCE008D0A44F2846B490E /* DPadControl.swift */,
-				65A004C48DD145A1BD2E0C04 /* ActionButtons.swift */,
-				4ECA182A9EF9433DB8D6133A /* HoldPiece.swift */,);
+			);
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -158,6 +163,10 @@
 		127F333B277C169300F3B415 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				12901443277C58A30061AFA8 /* tetris_original.mp3 */,
+				12901441277C589E0061AFA8 /* harddrop.mp3 */,
+				1290143F277C58990061AFA8 /* gameover.mp3 */,
+				1290143D277C58870061AFA8 /* fall.mp3 */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -269,9 +278,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				120277E2277DAA42001F03E7 /* simple.plist in Resources */,
+				12901442277C589E0061AFA8 /* harddrop.mp3 in Resources */,
 				127F331F277C144A00F3B415 /* LaunchScreen.storyboard in Resources */,
+				12901440277C58990061AFA8 /* gameover.mp3 in Resources */,
 				127F331C277C144A00F3B415 /* Assets.xcassets in Resources */,
+				1290143E277C58870061AFA8 /* fall.mp3 in Resources */,
+				120277E4277DAA48001F03E7 /* hard.plist in Resources */,
 				127F331A277C144900F3B415 /* Main.storyboard in Resources */,
+				12901444277C58A30061AFA8 /* tetris_original.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,10 +317,7 @@
 				127F3332277C14E800F3B415 /* GameButton.swift in Sources */,
 				127F332A277C14A400F3B415 /* GameView.swift in Sources */,
 				127F3335277C151000F3B415 /* SoundManager.swift in Sources */,
-			
-				362ABA3A55BD40A682401A0E /* DPadControl.swift in Sources */,
-				DC77FB032E7D4A158221FECE /* ActionButtons.swift in Sources */,
-				C143C37F15F543069853F7F4 /* HoldPiece.swift in Sources */,);
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */

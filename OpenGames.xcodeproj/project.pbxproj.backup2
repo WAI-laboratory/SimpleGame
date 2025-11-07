@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		362ABA3A55BD40A682401A0E /* DPadControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCDCE008D0A44F2846B490E /* DPadControl.swift */; };
-		DC77FB032E7D4A158221FECE /* ActionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A004C48DD145A1BD2E0C04 /* ActionButtons.swift */; };
-		C143C37F15F543069853F7F4 /* HoldPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA182A9EF9433DB8D6133A /* HoldPiece.swift */; };
 		120277DC277D873C001F03E7 /* SudokuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120277DB277D873C001F03E7 /* SudokuViewController.swift */; };
 		120277DE277D878D001F03E7 /* SudokuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120277DD277D878D001F03E7 /* SudokuView.swift */; };
 		120277E6277DAA6C001F03E7 /* SudokuClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120277E5277DAA6C001F03E7 /* SudokuClass.swift */; };
@@ -38,9 +35,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CFCDCE008D0A44F2846B490E /* DPadControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPadControl.swift; sourceTree = "<group>"; };
-		65A004C48DD145A1BD2E0C04 /* ActionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtons.swift; sourceTree = "<group>"; };
-		4ECA182A9EF9433DB8D6133A /* HoldPiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldPiece.swift; sourceTree = "<group>"; };
 		120277DB277D873C001F03E7 /* SudokuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuViewController.swift; sourceTree = "<group>"; };
 		120277DD277D878D001F03E7 /* SudokuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuView.swift; sourceTree = "<group>"; };
 		120277E5277DAA6C001F03E7 /* SudokuClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuClass.swift; sourceTree = "<group>"; };
@@ -131,10 +125,7 @@
 				127F332D277C14C100F3B415 /* GameScore.swift */,
 				127F332F277C14D200F3B415 /* NextBrick.swift */,
 				127F3331277C14E800F3B415 /* GameButton.swift */,
-			
-				CFCDCE008D0A44F2846B490E /* DPadControl.swift */,
-				65A004C48DD145A1BD2E0C04 /* ActionButtons.swift */,
-				4ECA182A9EF9433DB8D6133A /* HoldPiece.swift */,);
+			);
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -302,10 +293,7 @@
 				127F3332277C14E800F3B415 /* GameButton.swift in Sources */,
 				127F332A277C14A400F3B415 /* GameView.swift in Sources */,
 				127F3335277C151000F3B415 /* SoundManager.swift in Sources */,
-			
-				362ABA3A55BD40A682401A0E /* DPadControl.swift in Sources */,
-				DC77FB032E7D4A158221FECE /* ActionButtons.swift in Sources */,
-				C143C37F15F543069853F7F4 /* HoldPiece.swift in Sources */,);
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */

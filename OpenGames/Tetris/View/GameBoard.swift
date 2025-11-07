@@ -21,6 +21,9 @@ class GameBoard: UIView {
     
     var board = [[UIColor]]()
     var currentBrick:Brick?
+    var heldBrick:Brick?
+    var canHold = true // Can only hold once per brick placement
+    var showGhostPiece = true
     
     
     override init(frame: CGRect) {
@@ -43,11 +46,33 @@ class GameBoard: UIView {
 
     func generateBrick() {
         self.currentBrick = Brick.generate()
-        
+        self.canHold = true // Reset hold ability for new brick
+
         NotificationCenter.default.post(
             name: Notification.Name(rawValue: Swiftris.NewBrickDidGenerateNotification),
             object: nil
         )
+    }
+
+    func holdCurrentBrick() -> Brick? {
+        guard canHold, let current = currentBrick else { return nil }
+
+        canHold = false
+
+        if let held = heldBrick {
+            // Swap current with held
+            heldBrick = current
+            currentBrick = held
+            currentBrick?.tx = 5
+            currentBrick?.ty = -currentBrick!.vertical()
+        } else {
+            // First time holding
+            heldBrick = current
+            currentBrick = Brick.generate()
+        }
+
+        setNeedsDisplay()
+        return heldBrick
     }
     
     
@@ -228,8 +253,23 @@ class GameBoard: UIView {
                 self.drawAtRow(r, col: c, color:color)
             }
         }
-        // draw current bricks
+
         guard let currentBrick = self.currentBrick else { return }
+
+        // draw ghost piece (preview of landing position)
+        if showGhostPiece {
+            let ghostY = calculateGhostPosition(for: currentBrick)
+            for p in currentBrick.points {
+                let r = Int(p.y) + ghostY
+                let c = Int(p.x) + currentBrick.tx
+                if r >= 0 {
+                    let ghostColor = currentBrick.color.withAlphaComponent(0.3)
+                    self.drawAtRow(r, col: c, color: ghostColor)
+                }
+            }
+        }
+
+        // draw current brick
         for p in currentBrick.points {
             let r = Int(p.y) + currentBrick.ty
             let c = Int(p.x) + currentBrick.tx
@@ -238,6 +278,21 @@ class GameBoard: UIView {
                 self.drawAtRow(r, col: c, color: currentBrick.color)
             }
         }
+    }
+
+    private func calculateGhostPosition(for brick: Brick) -> Int {
+        var ghostY = brick.ty
+        let tempBrick = Brick(brick.brickType)
+        tempBrick.tx = brick.tx
+        tempBrick.ty = brick.ty
+        tempBrick.points = brick.points
+
+        while canMoveDown(tempBrick) {
+            tempBrick.moveDown()
+            ghostY = tempBrick.ty
+        }
+
+        return ghostY
     }
 
     
@@ -259,12 +314,22 @@ class GameBoard: UIView {
     
     func clear() {
         self.currentBrick = nil
-        
+        self.heldBrick = nil
+        self.canHold = true
+
         self.board = [[UIColor]]()
         for _ in 0..<GameBoard.rows {
             self.board.append(self.generateRow())
         }
         self.setNeedsDisplay()
+    }
+
+    func softDrop() {
+        guard let currentBrick = self.currentBrick else { return }
+        if self.canMoveDown(currentBrick) {
+            currentBrick.moveDown()
+            self.setNeedsDisplay()
+        }
     }
     
     var topY:CGFloat {

@@ -17,20 +17,22 @@ class SoundManager: NSObject {
     
     override init() {
         super.init()
-        self.bgmPlayer = self.makePlayer("tetris_original", ofType: "mp3")!
+        self.bgmPlayer = self.makePlayer("tetris_original", ofType: "mp3")
         self.bgmPlayer?.numberOfLoops = Int.max
         self.bgmPlayer?.volume = 0.1
-        
-        self.effectPlayer = self.makePlayer("fall", ofType: "mp3")!
+
+        self.effectPlayer = self.makePlayer("fall", ofType: "mp3")
         self.effectPlayer?.volume = 1
- 
-        self.gameOverPlayer = self.makePlayer("gameover", ofType: "mp3")!
+
+        self.gameOverPlayer = self.makePlayer("gameover", ofType: "mp3")
         self.gameOverPlayer?.volume = 1
-        
+
         let session = AVAudioSession.sharedInstance()
         do {
             try session.setCategory(AVAudioSession.Category.soloAmbient)
-        } catch {}
+        } catch {
+            debugPrint("Failed to set audio session category: \(error)")
+        }
     }
     
     deinit {

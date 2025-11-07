@@ -36,7 +36,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             tetrisVC,
             mineVC,
             UINavigationController(rootViewController: sudokuVC)
-        ], animated: true)
+        ], animated: false)
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

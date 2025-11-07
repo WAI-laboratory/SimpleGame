@@ -83,6 +83,19 @@ class GameScore: UIView {
             if let lineCount = userInfo["lineCount"] {
                 self.lineClearCount += lineCount.intValue
                 self.gameScore += self.scores[lineCount.intValue]
+
+                // Level up every 10 lines
+                let newLevel = self.lineClearCount / 10
+                if newLevel != self.gameLevel {
+                    self.gameLevel = newLevel
+                    // Post notification for level change
+                    NotificationCenter.default.post(
+                        name: Notification.Name(rawValue: Swiftris.LevelUpNotification),
+                        object: nil,
+                        userInfo: ["level": NSNumber(value: self.gameLevel)]
+                    )
+                }
+
                 self.update()
             }
         }
