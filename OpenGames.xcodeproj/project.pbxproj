@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		362ABA3A55BD40A682401A0E /* DPadControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCDCE008D0A44F2846B490E /* DPadControl.swift */; };
-		DC77FB032E7D4A158221FECE /* ActionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A004C48DD145A1BD2E0C04 /* ActionButtons.swift */; };
-		C143C37F15F543069853F7F4 /* HoldPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA182A9EF9433DB8D6133A /* HoldPiece.swift */; };
 		120277DC277D873C001F03E7 /* SudokuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120277DB277D873C001F03E7 /* SudokuViewController.swift */; };
 		120277DE277D878D001F03E7 /* SudokuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120277DD277D878D001F03E7 /* SudokuView.swift */; };
 		120277E6277DAA6C001F03E7 /* SudokuClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120277E5277DAA6C001F03E7 /* SudokuClass.swift */; };
@@ -34,14 +31,22 @@
 		127F334F277C26A800F3B415 /* MineBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F334E277C26A800F3B415 /* MineBoardView.swift */; };
 		127F3353277C271900F3B415 /* MineGameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F3352277C271900F3B415 /* MineGameSettings.swift */; };
 		127F3355277C273600F3B415 /* Minegame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F3354277C273600F3B415 /* Minegame.swift */; };
-		127F3357277C275F00F3B415 /* MineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F3356277C275F00F3B415 /* MineCell.swift */; };		D1A74688FFE14670A8137E2A /* simple.plist in Resources */ = {isa = PBXBuildFile; fileRef = C1B14C4B2056400AAFD17E31 /* simple.plist */; };
-		6060B79DE0894B1789198C03 /* hard.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41CFCD30E07B4FEAB2E546D5 /* hard.plist */; };
+		127F3357277C275F00F3B415 /* MineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F3356277C275F00F3B415 /* MineCell.swift */; };
+		15CAFCAA70BC485A932F1D4D /* OpenGames/SheepAndSheep/View/CollectionSlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7BB4982854A4A808C42A9 /* OpenGames/SheepAndSheep/View/CollectionSlotView.swift */; };
+		362ABA3A55BD40A682401A0E /* DPadControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCDCE008D0A44F2846B490E /* DPadControl.swift */; };
+		53D98D9965E648779B12B874 /* OpenGames/SheepAndSheep/Model/Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE5F112B7714B168CA6147B /* OpenGames/SheepAndSheep/Model/Tile.swift */; };
+		6060B79DE0894B1789198C03 /* OpenGames/Resources/hard.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41CFCD30E07B4FEAB2E546D5 /* OpenGames/Resources/hard.plist */; };
+		925C0E07F26F47B78C0E9728 /* OpenGames/SheepAndSheep/Model/LevelGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B770A64098DD44749E386924 /* OpenGames/SheepAndSheep/Model/LevelGenerator.swift */; };
+		9428514C11FA4AFB8C9D5902 /* OpenGames/SheepAndSheep/View/GameBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E897A9A19AE43B0B9E42D5B /* OpenGames/SheepAndSheep/View/GameBoardView.swift */; };
+		C143C37F15F543069853F7F4 /* HoldPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECA182A9EF9433DB8D6133A /* HoldPiece.swift */; };
+		D1A74688FFE14670A8137E2A /* OpenGames/Resources/simple.plist in Resources */ = {isa = PBXBuildFile; fileRef = C1B14C4B2056400AAFD17E31 /* OpenGames/Resources/simple.plist */; };
+		DB9D8A7623724FA1A6ADC66A /* OpenGames/SheepAndSheep/Controller/SheepGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64265E62DA5146DC88EA59E4 /* OpenGames/SheepAndSheep/Controller/SheepGameViewController.swift */; };
+		DC77FB032E7D4A158221FECE /* ActionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A004C48DD145A1BD2E0C04 /* ActionButtons.swift */; };
+		EC4135656AE946D59B11ABD6 /* OpenGames/SheepAndSheep/View/TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E24B98097D429C84CBAB95 /* OpenGames/SheepAndSheep/View/TileView.swift */; };
+		F40EFD7D70004A8E8C61F8EE /* OpenGames/SheepAndSheep/Model/SheepGameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C820562E81BF4940909143B6 /* OpenGames/SheepAndSheep/Model/SheepGameBoard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CFCDCE008D0A44F2846B490E /* DPadControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPadControl.swift; sourceTree = "<group>"; };
-		65A004C48DD145A1BD2E0C04 /* ActionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtons.swift; sourceTree = "<group>"; };
-		4ECA182A9EF9433DB8D6133A /* HoldPiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldPiece.swift; sourceTree = "<group>"; };
 		120277DB277D873C001F03E7 /* SudokuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuViewController.swift; sourceTree = "<group>"; };
 		120277DD277D878D001F03E7 /* SudokuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuView.swift; sourceTree = "<group>"; };
 		120277E5277DAA6C001F03E7 /* SudokuClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuClass.swift; sourceTree = "<group>"; };
@@ -66,8 +71,19 @@
 		127F334E277C26A800F3B415 /* MineBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineBoardView.swift; sourceTree = "<group>"; };
 		127F3352277C271900F3B415 /* MineGameSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineGameSettings.swift; sourceTree = "<group>"; };
 		127F3354277C273600F3B415 /* Minegame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Minegame.swift; sourceTree = "<group>"; };
-		127F3356277C275F00F3B415 /* MineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineCell.swift; sourceTree = "<group>"; };		C1B14C4B2056400AAFD17E31 /* simple.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = OpenGames/Resources/simple.plist; sourceTree = SOURCE_ROOT; };
-		41CFCD30E07B4FEAB2E546D5 /* hard.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = OpenGames/Resources/hard.plist; sourceTree = SOURCE_ROOT; };
+		127F3356277C275F00F3B415 /* MineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineCell.swift; sourceTree = "<group>"; };
+		23E24B98097D429C84CBAB95 /* OpenGames/SheepAndSheep/View/TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenGames/SheepAndSheep/View/TileView.swift; sourceTree = "<group>"; };
+		41CFCD30E07B4FEAB2E546D5 /* OpenGames/Resources/hard.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = OpenGames/Resources/hard.plist; sourceTree = SOURCE_ROOT; };
+		4ECA182A9EF9433DB8D6133A /* HoldPiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldPiece.swift; sourceTree = "<group>"; };
+		64265E62DA5146DC88EA59E4 /* OpenGames/SheepAndSheep/Controller/SheepGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenGames/SheepAndSheep/Controller/SheepGameViewController.swift; sourceTree = "<group>"; };
+		65A004C48DD145A1BD2E0C04 /* ActionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtons.swift; sourceTree = "<group>"; };
+		7E897A9A19AE43B0B9E42D5B /* OpenGames/SheepAndSheep/View/GameBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenGames/SheepAndSheep/View/GameBoardView.swift; sourceTree = "<group>"; };
+		AED7BB4982854A4A808C42A9 /* OpenGames/SheepAndSheep/View/CollectionSlotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenGames/SheepAndSheep/View/CollectionSlotView.swift; sourceTree = "<group>"; };
+		B770A64098DD44749E386924 /* OpenGames/SheepAndSheep/Model/LevelGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenGames/SheepAndSheep/Model/LevelGenerator.swift; sourceTree = "<group>"; };
+		BDE5F112B7714B168CA6147B /* OpenGames/SheepAndSheep/Model/Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenGames/SheepAndSheep/Model/Tile.swift; sourceTree = "<group>"; };
+		C1B14C4B2056400AAFD17E31 /* OpenGames/Resources/simple.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = OpenGames/Resources/simple.plist; sourceTree = SOURCE_ROOT; };
+		C820562E81BF4940909143B6 /* OpenGames/SheepAndSheep/Model/SheepGameBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenGames/SheepAndSheep/Model/SheepGameBoard.swift; sourceTree = SOURCE_ROOT; };
+		CFCDCE008D0A44F2846B490E /* DPadControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPadControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +114,7 @@
 			children = (
 				127F3311277C144900F3B415 /* OpenGames */,
 				127F3310277C144900F3B415 /* Products */,
+				47A0AD082EBE69B700A87131 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,10 +150,10 @@
 				127F332D277C14C100F3B415 /* GameScore.swift */,
 				127F332F277C14D200F3B415 /* NextBrick.swift */,
 				127F3331277C14E800F3B415 /* GameButton.swift */,
-			
 				CFCDCE008D0A44F2846B490E /* DPadControl.swift */,
 				65A004C48DD145A1BD2E0C04 /* ActionButtons.swift */,
-				4ECA182A9EF9433DB8D6133A /* HoldPiece.swift */,);
+				4ECA182A9EF9433DB8D6133A /* HoldPiece.swift */,
+			);
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -160,7 +177,8 @@
 		127F333B277C169300F3B415 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C1B14C4B2056400AAFD17E31 /* simple.plist */,			);
+				C1B14C4B2056400AAFD17E31 /* OpenGames/Resources/simple.plist */,
+			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
@@ -203,6 +221,21 @@
 				127F3356277C275F00F3B415 /* MineCell.swift */,
 			);
 			path = MineModel;
+			sourceTree = "<group>";
+		};
+		47A0AD082EBE69B700A87131 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				C820562E81BF4940909143B6 /* OpenGames/SheepAndSheep/Model/SheepGameBoard.swift */,
+				64265E62DA5146DC88EA59E4 /* OpenGames/SheepAndSheep/Controller/SheepGameViewController.swift */,
+				AED7BB4982854A4A808C42A9 /* OpenGames/SheepAndSheep/View/CollectionSlotView.swift */,
+				7E897A9A19AE43B0B9E42D5B /* OpenGames/SheepAndSheep/View/GameBoardView.swift */,
+				23E24B98097D429C84CBAB95 /* OpenGames/SheepAndSheep/View/TileView.swift */,
+				B770A64098DD44749E386924 /* OpenGames/SheepAndSheep/Model/LevelGenerator.swift */,
+				BDE5F112B7714B168CA6147B /* OpenGames/SheepAndSheep/Model/Tile.swift */,
+				41CFCD30E07B4FEAB2E546D5 /* OpenGames/Resources/hard.plist */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,8 +304,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6060B79DE0894B1789198C03 /* hard.plist in Resources */,
-				D1A74688FFE14670A8137E2A /* simple.plist in Resources */,				127F331F277C144A00F3B415 /* LaunchScreen.storyboard in Resources */,
+				6060B79DE0894B1789198C03 /* OpenGames/Resources/hard.plist in Resources */,
+				D1A74688FFE14670A8137E2A /* OpenGames/Resources/simple.plist in Resources */,
+				127F331F277C144A00F3B415 /* LaunchScreen.storyboard in Resources */,
 				127F331C277C144A00F3B415 /* Assets.xcassets in Resources */,
 				127F331A277C144900F3B415 /* Main.storyboard in Resources */,
 			);
@@ -285,6 +319,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F40EFD7D70004A8E8C61F8EE /* OpenGames/SheepAndSheep/Model/SheepGameBoard.swift in Sources */,
+				DB9D8A7623724FA1A6ADC66A /* OpenGames/SheepAndSheep/Controller/SheepGameViewController.swift in Sources */,
+				15CAFCAA70BC485A932F1D4D /* OpenGames/SheepAndSheep/View/CollectionSlotView.swift in Sources */,
+				9428514C11FA4AFB8C9D5902 /* OpenGames/SheepAndSheep/View/GameBoardView.swift in Sources */,
+				EC4135656AE946D59B11ABD6 /* OpenGames/SheepAndSheep/View/TileView.swift in Sources */,
+				925C0E07F26F47B78C0E9728 /* OpenGames/SheepAndSheep/Model/LevelGenerator.swift in Sources */,
+				53D98D9965E648779B12B874 /* OpenGames/SheepAndSheep/Model/Tile.swift in Sources */,
 				127F3327277C148700F3B415 /* Swiftris.swift in Sources */,
 				127F3317277C144900F3B415 /* TetrisViewController.swift in Sources */,
 				127F3313277C144900F3B415 /* AppDelegate.swift in Sources */,
@@ -305,10 +346,10 @@
 				127F3332277C14E800F3B415 /* GameButton.swift in Sources */,
 				127F332A277C14A400F3B415 /* GameView.swift in Sources */,
 				127F3335277C151000F3B415 /* SoundManager.swift in Sources */,
-			
 				362ABA3A55BD40A682401A0E /* DPadControl.swift in Sources */,
 				DC77FB032E7D4A158221FECE /* ActionButtons.swift in Sources */,
-				C143C37F15F543069853F7F4 /* HoldPiece.swift in Sources */,);
+				C143C37F15F543069853F7F4 /* HoldPiece.swift in Sources */,
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
@@ -455,7 +496,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = VZTRDYYN8R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OpenGames/Info.plist;
@@ -470,7 +511,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yongjun.OpenGames;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -485,7 +526,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = VZTRDYYN8R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OpenGames/Info.plist;
@@ -500,7 +541,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yongjun.OpenGames;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

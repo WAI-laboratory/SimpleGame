@@ -177,5 +177,40 @@ class sudokuClass {
         inProgress = set
     }
 
+    // MARK: - UserDefaults Persistence
+
+    /// Save current game state to UserDefaults
+    func saveGameState() {
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(grid) {
+            UserDefaults.standard.set(encoded, forKey: "SudokuGameState")
+            UserDefaults.standard.set(inProgress, forKey: "SudokuInProgress")
+            UserDefaults.standard.synchronize()
+        }
+    }
+
+    /// Load saved game state from UserDefaults
+    func loadGameState() -> Bool {
+        guard let savedData = UserDefaults.standard.data(forKey: "SudokuGameState") else {
+            return false
+        }
+
+        let decoder = JSONDecoder()
+        if let loadedGrid = try? decoder.decode(sudokuData.self, from: savedData) {
+            grid = loadedGrid
+            inProgress = UserDefaults.standard.bool(forKey: "SudokuInProgress")
+            return true
+        }
+
+        return false
+    }
+
+    /// Clear saved game state
+    func clearSavedState() {
+        UserDefaults.standard.removeObject(forKey: "SudokuGameState")
+        UserDefaults.standard.removeObject(forKey: "SudokuInProgress")
+        UserDefaults.standard.synchronize()
+    }
+
 }
 

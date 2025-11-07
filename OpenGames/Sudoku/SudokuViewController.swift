@@ -37,6 +37,31 @@ class SudokuViewController: UIViewController {
         initView()
         setupControlButtons()  // Must be called before setupKeypad()
         setupKeypad()           // Keypad depends on noteToggleButton position
+
+        // Load saved game state if available
+        loadSavedGame()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // Save game state when leaving the view
+        saveGame()
+    }
+
+    private func loadSavedGame() {
+        let puzzle = appDelegate.sudoku
+        if puzzle.loadGameState() {
+            // Successfully loaded saved state
+            refresh()
+        }
+    }
+
+    private func saveGame() {
+        let puzzle = appDelegate.sudoku
+        // Only save if there's an active puzzle
+        if puzzle.inProgress {
+            puzzle.saveGameState()
+        }
     }
 
     private func initView() {
@@ -173,6 +198,7 @@ class SudokuViewController: UIViewController {
         puzzle.clearUserPuzzle()
         puzzle.clearPencilPuzzle()
         puzzle.gameInProgress(set: false)
+        puzzle.clearSavedState() // Clear saved state
         refresh()
     }
 
@@ -185,13 +211,21 @@ class SudokuViewController: UIViewController {
         puzzle.grid.gameDiff = "simple"
         let array = appDelegate.getPuzzles(puzzle.grid.gameDiff)
         puzzle.grid.plistPuzzle = puzzle.plistToPuzzle(plist: array[random(array.count)], toughness: puzzle.grid.gameDiff)
+        puzzle.clearUserPuzzle()
+        puzzle.clearPencilPuzzle()
+        puzzle.gameInProgress(set: true)
+        puzzle.saveGameState() // Save new puzzle
     }
-    
+
     func _Hard() {
         let puzzle = appDelegate.sudoku
         puzzle.grid.gameDiff = "hard"
         let array = appDelegate.getPuzzles(puzzle.grid.gameDiff)
         puzzle.grid.plistPuzzle = puzzle.plistToPuzzle(plist: array[random(array.count)], toughness: puzzle.grid.gameDiff)
+        puzzle.clearUserPuzzle()
+        puzzle.clearPencilPuzzle()
+        puzzle.gameInProgress(set: true)
+        puzzle.saveGameState() // Save new puzzle
     }
     
 //    @IBAction func Continue(_ sender: Any) {
@@ -246,13 +280,16 @@ class SudokuViewController: UIViewController {
                 if grid?.plistPuzzle[row][col] == 0 && grid?.userPuzzle[row][col] == 0  {
                     appDelegate.sudoku.userGrid(n: sender.tag, row: row, col: col)
                     refresh()
+                    puzzle.saveGameState() // Save after input
                 } else if grid?.plistPuzzle[row][col] == 0 || grid?.userPuzzle[row][col] == sender.tag {
                     appDelegate.sudoku.userGrid(n: 0, row: row, col: col)
                     refresh()
+                    puzzle.saveGameState() // Save after clearing
                 }
             } else {
                 appDelegate.sudoku.pencilGrid(n: sender.tag, row: row, col: col)
                 refresh()
+                puzzle.saveGameState() // Save after note toggle
             }
         }
     }
@@ -261,15 +298,16 @@ class SudokuViewController: UIViewController {
         let row = PuzzleArea.selected.row
         let col = PuzzleArea.selected.column
         var grid = appDelegate.sudoku.grid
-        
+
         if grid?.userPuzzle[row][col] != 0 {
             appDelegate.sudoku.userGrid(n: 0, row: row, col: col)
         }
-        
+
         for i in 0...9 {
             appDelegate.sudoku.pencilGridBlank(n: i, row: row, col: col)
         }
         refresh()
+        appDelegate.sudoku.saveGameState() // Save after clearing cell
     }
 }
 
