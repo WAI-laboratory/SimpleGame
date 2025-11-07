@@ -34,7 +34,8 @@
 		127F334F277C26A800F3B415 /* MineBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F334E277C26A800F3B415 /* MineBoardView.swift */; };
 		127F3353277C271900F3B415 /* MineGameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F3352277C271900F3B415 /* MineGameSettings.swift */; };
 		127F3355277C273600F3B415 /* Minegame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F3354277C273600F3B415 /* Minegame.swift */; };
-		127F3357277C275F00F3B415 /* MineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F3356277C275F00F3B415 /* MineCell.swift */; };
+		127F3357277C275F00F3B415 /* MineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127F3356277C275F00F3B415 /* MineCell.swift */; };		D1A74688FFE14670A8137E2A /* simple.plist in Resources */ = {isa = PBXBuildFile; fileRef = C1B14C4B2056400AAFD17E31 /* simple.plist */; };
+		6060B79DE0894B1789198C03 /* hard.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41CFCD30E07B4FEAB2E546D5 /* hard.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,7 +66,8 @@
 		127F334E277C26A800F3B415 /* MineBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineBoardView.swift; sourceTree = "<group>"; };
 		127F3352277C271900F3B415 /* MineGameSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineGameSettings.swift; sourceTree = "<group>"; };
 		127F3354277C273600F3B415 /* Minegame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Minegame.swift; sourceTree = "<group>"; };
-		127F3356277C275F00F3B415 /* MineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineCell.swift; sourceTree = "<group>"; };
+		127F3356277C275F00F3B415 /* MineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineCell.swift; sourceTree = "<group>"; };		C1B14C4B2056400AAFD17E31 /* simple.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = OpenGames/Resources/simple.plist; sourceTree = SOURCE_ROOT; };
+		41CFCD30E07B4FEAB2E546D5 /* hard.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = OpenGames/Resources/hard.plist; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +160,7 @@
 		127F333B277C169300F3B415 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-			);
+				C1B14C4B2056400AAFD17E31 /* simple.plist */,			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
@@ -269,7 +271,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				127F331F277C144A00F3B415 /* LaunchScreen.storyboard in Resources */,
+				6060B79DE0894B1789198C03 /* hard.plist in Resources */,
+				D1A74688FFE14670A8137E2A /* simple.plist in Resources */,				127F331F277C144A00F3B415 /* LaunchScreen.storyboard in Resources */,
 				127F331C277C144A00F3B415 /* Assets.xcassets in Resources */,
 				127F331A277C144900F3B415 /* Main.storyboard in Resources */,
 			);

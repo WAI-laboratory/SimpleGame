@@ -54,16 +54,16 @@ class sudokuClass {
         // if no value exists in entry -- no conflict
         if n == 0 { return false }
         
-        // check all columns - if same number as current number (except current location) -- conflict
-        for r in 0...8 {
-            if r != row && (grid.plistPuzzle[row][column] == n || grid.userPuzzle[row][column] == n) {
+        // check all rows - if same number as current number (except current location) -- conflict
+        for c in 0...8 {
+            if c != column && (grid.plistPuzzle[row][c] == n || grid.userPuzzle[row][c] == n) {
                 return true;
             }
         }
-        
-        // check all rows - if same number as current number (except current location) -- conflict
-        for c in 0...8 {
-            if c != column && (grid.plistPuzzle[row][column] == n || grid.userPuzzle[row][column] == n) {
+
+        // check all columns - if same number as current number (except current location) -- conflict
+        for r in 0...8 {
+            if r != row && (grid.plistPuzzle[r][column] == n || grid.userPuzzle[r][column] == n) {
                 return true;
             }
         }
@@ -81,7 +81,7 @@ class sudokuClass {
         for r in startRow...endRow {
             for c in startCol...endCol {
                 // if not the original square and contains the value n -- conflict
-                if c != column && r != row && (grid.plistPuzzle[row][column] == n || grid.userPuzzle[row][column] == n) {
+                if c != column && r != row && (grid.plistPuzzle[r][c] == n || grid.userPuzzle[r][c] == n) {
                     return true
                 } // end if
             } // end c
