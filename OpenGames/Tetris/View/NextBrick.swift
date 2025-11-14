@@ -10,9 +10,6 @@ import Foundation
 import UIKit
 
 class NextBrick: UIView {
-
-    fileprivate var gameButton = GameButton(title: "Play", frame: CGRect.zero)
-    fileprivate var stopButton = GameButton(title: "Stop", frame: CGRect.zero)
     
     override init(frame: CGRect) {
         super.init(frame: CGRect.zero)
@@ -23,7 +20,6 @@ class NextBrick: UIView {
                                                          name: NSNotification.Name(rawValue: Swiftris.NewBrickDidGenerateNotification),
                                                          object: nil)
         
-        self.makeGameButton()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -74,99 +70,8 @@ class NextBrick: UIView {
         }
     }
     
-    func makeGameButton() {
-        // play and pause button
-        self.gameButton.translatesAutoresizingMaskIntoConstraints = false
-        self.gameButton.addTarget(self, action: #selector(NextBrick.changeGameState(_:)), for: UIControl.Event.touchUpInside)
-        self.addSubview(self.gameButton)
-        
-        self.stopButton.translatesAutoresizingMaskIntoConstraints = false
-        self.stopButton.addTarget(self, action: #selector(NextBrick.gameStop(_:)), for: UIControl.Event.touchUpInside)
-        self.addSubview(self.stopButton)
-        
-        let views = [
-            "gameButton":gameButton,
-            "selfView":self,
-            "stopButton":stopButton
-        ] as [String : Any]
-        
-        self.addConstraints(
-            NSLayoutConstraint.constraints(
-                withVisualFormat: "H:[gameButton(60)]",
-                options: [],
-                metrics: nil,
-                views: views)
-        )
-        
-        self.addConstraints(
-            NSLayoutConstraint.constraints(
-                withVisualFormat: "V:[gameButton(60)]-20-|",
-                options: [],
-                metrics: nil,
-                views: views)
-        )
-        
-        self.addConstraints(NSLayoutConstraint.constraints(
-            withVisualFormat: "V:[selfView]-(<=0)-[gameButton]",
-            options: NSLayoutConstraint.FormatOptions.alignAllCenterX,
-            metrics: nil ,
-            views: views)
-        )
-        
-        self.addConstraints(NSLayoutConstraint.constraints(
-            withVisualFormat: "H:[stopButton(60)]",
-            options: [],
-            metrics: nil,
-            views: views)
-        )
-        
-        self.addConstraints(NSLayoutConstraint.constraints(
-            withVisualFormat: "V:[stopButton(60)]-10-[gameButton]",
-            options: NSLayoutConstraint.FormatOptions.alignAllLeft,
-            metrics: nil, views: views)
-        )
-    }
-    
-    @objc func gameStop(_ sender:UIButton) {
-        NotificationCenter.default.post(
-            name: Notification.Name(rawValue: Swiftris.GameStateChangeNotification),
-            object: nil,
-            userInfo: ["gameState":NSNumber(value: GameState.stop.rawValue as Int)]
-        )
-    }
-    
-    @objc func changeGameState(_ sender:UIButton) {
-        sender.isSelected = !sender.isSelected
-        let gameState = self.update(sender.isSelected)
-        
-        NotificationCenter.default.post(
-            name: Notification.Name(rawValue: Swiftris.GameStateChangeNotification),
-            object: nil,
-            userInfo: ["gameState":NSNumber(value: gameState.rawValue as Int)]
-        )
-    }
-    
-    @discardableResult
-    func update(_ selected:Bool) -> GameState {
-        var gameState = GameState.play
-        if selected {
-            gameState = GameState.play
-            self.gameButton.setTitle("Pause", for: UIControl.State())
-        } else {
-            gameState = GameState.pause
-            self.gameButton.setTitle("Play", for: UIControl.State())
-        }
-        return gameState
-    }
-    
     func prepare() {
-        self.clearButtons()
         self.clearNextBricks()
-    }
-    
-    func clearButtons() {
-        self.gameButton.isSelected = false
-        self.update(self.gameButton.isSelected)
     }
     
     func clearNextBricks() {

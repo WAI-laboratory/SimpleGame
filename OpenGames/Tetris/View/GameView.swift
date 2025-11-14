@@ -19,7 +19,7 @@ class GameView: UIView {
 
     var gameScore = GameScore(frame:CGRect.zero)
     var gameBoard = GameBoard(frame:CGRect.zero)
-//    var nextBrick = NextBrick(frame:CGRect.zero)
+    var nextBrick = NextBrick(frame:CGRect.zero)
     var holdPiece = HoldPiece(frame:CGRect.zero)
 
     // Movement buttons
@@ -59,7 +59,7 @@ class GameView: UIView {
         addSubview(gameScore)
         addSubview(holdPiece)
         addSubview(gameBoard)
-//        addSubview(nextBrick)
+        addSubview(nextBrick)
 
         // Setup constraints
         gameScore.translatesAutoresizingMaskIntoConstraints = false
@@ -72,7 +72,7 @@ class GameView: UIView {
         holdPiece.translatesAutoresizingMaskIntoConstraints = false
         holdPiece.snp.makeConstraints { make in
             make.trailing.equalToSuperview().inset(8)
-            make.top.equalTo(gameScore.snp.bottom).offset(20)
+            make.top.equalTo(nextBrick.snp.bottom).offset(20)
             make.width.height.equalTo(90)
         }
 
@@ -84,13 +84,13 @@ class GameView: UIView {
             make.height.equalTo(GameBoard.height)
         }
 
-//        nextBrick.translatesAutoresizingMaskIntoConstraints = false
-//        nextBrick.snp.makeConstraints { make in
-//            make.trailing.equalToSuperview().offset(-8)
-//            make.top.equalTo(gameScore.snp.bottom).offset(20)
-//            make.width.equalTo(90)
-//            make.height.equalTo(280)
-//        }
+        nextBrick.translatesAutoresizingMaskIntoConstraints = false
+        nextBrick.snp.makeConstraints { make in
+            make.trailing.equalToSuperview().offset(-8)
+            make.top.equalTo(gameScore.snp.bottom).offset(20)
+            make.width.equalTo(90)
+            make.height.equalTo(120)
+        }
 
         // Setup movement buttons at bottom
         setupMovementButtons()
@@ -233,14 +233,14 @@ class GameView: UIView {
     func clear() {
         self.gameScore.clear()
         self.gameBoard.clear()
-//        self.nextBrick.prepare()
+        self.nextBrick.clearNextBricks()
         self.holdPiece.clear()
     }
 
     func prepare() {
         self.gameScore.clear()
         self.gameBoard.clear()
-//        self.nextBrick.clearNextBricks()
+        self.nextBrick.clearNextBricks()
         self.holdPiece.clear()
     }
 }

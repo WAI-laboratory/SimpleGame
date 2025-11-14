@@ -31,7 +31,7 @@ class Swiftris: NSObject {
 
     var gameState = GameState.stop
     var currentLevel = 0
-    var dropSpeed = 10 // Number of frames before piece drops (higher = slower)
+    var dropSpeed = 20 // Number of frames before piece drops (higher = slower)
 
     required init(gameView:GameView) {
         super.init()
@@ -138,13 +138,13 @@ class Swiftris: NSObject {
         guard let level = userInfo["level"] else { return }
 
         currentLevel = level.intValue
-        // Speed increases with level: starts at 10, decreases by 1 each level, minimum 2
-        dropSpeed = max(2, 10 - currentLevel)
+        // Speed increases with level: starts at 20, decreases by 2 each level, minimum 4
+        dropSpeed = max(4, 20 - (currentLevel * 2))
     }
 
     fileprivate func prepare() {
         self.currentLevel = 0
-        self.dropSpeed = 10
+        self.dropSpeed = 20
         self.gameView.prepare()
         self.gameView.gameBoard.generateBrick()
     }
@@ -295,6 +295,11 @@ class Swiftris: NSObject {
 extension Swiftris: GameViewDelegate {
     func didSelectPlay() {
         self.playGame()
+        NotificationCenter.default.post(
+            name: Notification.Name(rawValue: Swiftris.GameStateChangeNotification),
+            object: nil,
+            userInfo: ["gameState":NSNumber(value: gameState.rawValue as Int)]
+        )
     }
     
     func didSelectPause() {
@@ -303,6 +308,11 @@ extension Swiftris: GameViewDelegate {
     
     func didSelectStop() {
         self.stopGame()
+        NotificationCenter.default.post(
+            name: Notification.Name(rawValue: Swiftris.GameStateChangeNotification),
+            object: nil,
+            userInfo: ["gameState":NSNumber(value: GameState.stop.rawValue as Int)]
+        )
     }
     
 }
