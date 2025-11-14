@@ -51,9 +51,8 @@ class Swiftris: NSObject {
         self.addLevelUpNotificationAction(#selector(Swiftris.levelUp(_:)))
 
         // Setup control buttons (Play, Pause, Stop)
-        self.gameView.playButton.addTarget(self, action: #selector(playGame), for: .touchUpInside)
-        self.gameView.pauseButton.addTarget(self, action: #selector(pauseGame), for: .touchUpInside)
-        self.gameView.stopButton.addTarget(self, action: #selector(stopGame), for: .touchUpInside)
+
+        self.gameView.delegate = self
 
         // Setup movement buttons (Left, Right, Down)
         self.gameView.leftButton.addTarget(self, action: #selector(moveLeft), for: .touchUpInside)
@@ -290,4 +289,20 @@ class Swiftris: NSObject {
     fileprivate func removeGameStateChangeNotificationAction() {
         NotificationCenter.default.removeObserver(self)
     }
+}
+
+
+extension Swiftris: GameViewDelegate {
+    func didSelectPlay() {
+        self.playGame()
+    }
+    
+    func didSelectPause() {
+        self.pauseGame()
+    }
+    
+    func didSelectStop() {
+        self.stopGame()
+    }
+    
 }

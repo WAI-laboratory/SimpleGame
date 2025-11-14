@@ -14,10 +14,16 @@ class GameScore: UIView {
     var gameLevel = 0
     var lineClearCount = 0
     var gameScore = 0
+
+    // Public property to access the burger menu button
+    var burgerMenuButton: UIButton {
+        return self.burgerButton
+    }
     
     fileprivate var levelLabel = UILabel()
     fileprivate var lineClearLabel = UILabel()
     fileprivate var scoreLabel = UILabel()
+    fileprivate var burgerButton = UIButton(type: .system)
     fileprivate var scores = [0, 10, 30, 60, 100]
     
     override init(frame: CGRect) {
@@ -48,17 +54,26 @@ class GameScore: UIView {
         self.scoreLabel.adjustsFontSizeToFitWidth = true
         self.scoreLabel.minimumScaleFactor = 0.9
         self.addSubview(self.scoreLabel)
+
+        // Setup hamburger menu button
+        self.burgerButton.translatesAutoresizingMaskIntoConstraints = false
+        self.burgerButton.setTitle("☰", for: .normal)
+        self.burgerButton.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        self.burgerButton.tintColor = .white
+        self.burgerButton.backgroundColor = .clear
+        self.addSubview(self.burgerButton)
         
         let views = [
             "level": self.levelLabel,
             "lineClear": self.lineClearLabel,
             "score": self.scoreLabel,
+            "burger": self.burgerButton,
             "selfView": self
         ] as [String : Any]
-        
+
         self.addConstraints(
             NSLayoutConstraint.constraints(
-                withVisualFormat: "H:|-[level(80)]-10-[lineClear(>=90)]-10-[score(lineClear)]-|",
+                withVisualFormat: "H:|-[level(80)]-10-[lineClear(>=90)]-10-[score(lineClear)]-10-[burger(30)]-|",
                 options: NSLayoutConstraint.FormatOptions.alignAllCenterY,
                 metrics: nil,
                 views: views)
